@@ -1,0 +1,384 @@
+@font-face {
+    font-family: "Netflix sans bold";
+    src: url("/assets/fon-family/NetflixSans-Medium.otf");
+}
+@font-face {
+    font-family: "Netflix sans regular";
+    src: url("/assets/fon-family/NetflixSans-Regular.otf");
+}
+@import url('https://fonts.cdnfonts.com/css/netflix-font');
+:root {
+    --text-color-primary:#fff;
+    --border-color: rgba(128, 128, 128, 0.7);
+    --background-btn: #e50919;
+    --background-input-color:rgba(22, 22, 22, 0.7);
+    --border-radius:rgba(22, 22, 22, 0.7);
+}
+
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Netflix sans regular',Helvetica, Arial, sans-serif;
+    color: #fff;
+    background-color: #000000;
+    font-family: 'Netflix Font', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+
+
+
+header {
+    padding: 1.385rem 11.9%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%), url(/assets/images/header-image.jpg) center / cover;
+    min-height: calc(100vh + 2.1rem);
+}
+
+header nav .image-logo {
+    height: 41px;
+}
+
+header nav .image-logo img {
+    height: 100%;
+    width: 100%;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    background-color: rgb(229,9,20);
+    color: #fff;
+    padding: 0.391rem 1.1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 0.25rem;
+    font-family: "Netflix sans regular";
+    font-weight: 600;
+}
+
+.btn a {
+    color: #fff;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin-top: 2.7rem;
+}
+.header-container .header-content  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0 1rem;
+    text-align: center
+} 
+
+
+.header-container .header-content h1 {
+    font-size: 3.125rem;
+    font-weight: bold; 
+    font-family: 'Netflix sans bold',Helvetica, Arial, sans-serif;
+}
+
+.header-content p, .header-content h3{
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-family: "netflix sans regular";
+}
+
+.header-container .header-content form {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+}
+
+.header-container .header-content input {
+    padding: 1rem 4rem;
+    font-size: 1.4rem;
+    background: rgba(22, 22, 22, 0.7);
+    border: none;
+}
+
+.header-container .header-content form div {
+    position: relative;
+    border: 1px solid rgba(128, 128, 128, 0.7);
+    border-radius: 0.25rem;
+}
+.header-container .header-content form .input-div {
+    border-radius: var(--border-radius);
+}
+.header-container .header-content form .input-div {
+    border: none;
+}
+.header-container .header-content input~label {
+    position: absolute;
+    left: 16px;
+    top: 18px;
+    z-index: 3;
+    color: #aaa;
+    transition: all 0.15s ease;
+}
+
+.header-container .header-content form input:focus {
+    border-color: #e50919;
+}
+
+.header-container .header-content form input:focus ~ label{
+    top: 3px;
+    font-size: .8rem;
+}
+
+.header-container .header-content form button {
+    font-size: 1.7rem;
+    padding: 0.89rem 1.3rem;
+    margin-left: 0.3rem;
+    background-color: #e50919;
+    color: #fff;
+    border: 0;
+    font-weight: 700;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: auto;
+    padding: 4.5rem 10.5rem;
+    align-items: center;
+    gap: 0.7rem;
+} 
+
+
+section .texts h2 {
+    font-size: 2.9rem;
+    font-weight: 900;
+}
+section .texts p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 1.6rem;
+}
+section.padding-left {
+    padding-left: 16%;
+}
+
+section .media {
+    position: relative;
+}
+
+section .media img {
+    width: 100%;
+    height: 100%;
+}
+
+section .media video {
+    position: absolute;
+    width: 72.5%;
+    top: 21%;
+    left: 13.4%;
+}
+
+.border-height {
+    border-top: 8px solid #aaaaaa33;
+}
+
+.faq-question {
+    padding: 4.375rem 1.875rem;
+}
+.faq-question h1{
+    font-size: 3.125rem;
+    text-align: center;
+}
+.questions {
+    max-width: 39.6875rem;
+    margin: 0 auto;
+}
+
+.question {
+    position: relative;
+    background-color: #303030;
+}
+.question svg {
+    width: 1.875rem;
+    height: 1.875rem;
+    right: .625rem;
+    top: .625rem;
+    position: absolute;
+}
+
+.question .header {
+    padding: 1.25rem 1.875rem;
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+    display: block;
+}
+.question .answer {
+    padding: 0 1.875rem;
+    max-height: 0;
+    overflow: hidden;
+  
+}
+
+
+.question input[type="checkbox"]:checked ~ .answer {
+    padding: 0 1.875rem;
+    max-height: 37.5rem;
+}
+
+
+/* SECTION FOOTER */
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+.footer a {
+    color: #aaa;
+    text-decoration: underline;
+}
+.footer .col div {
+    margin-bottom: 1rem;
+    color: #aaa;
+}
+.footer .col-1 div:first-child {
+    margin-bottom: 2.2rem;
+}
+
+.footer .col-1 div:last-child {
+    margin-top: 1.5rem;
+}
+
+select {
+    background: transparent;
+    color: #fff;
+    padding: .375rem 0 .375rem 1.25rem;
+    border-radius: .25rem;
+}
+
+.select svg {
+    height: 1.25rem;
+    fill: #fff;
+    position: absolute;
+    margin-top: .3125rem;
+    margin-left: .25rem;
+}
+
+@media screen and (max-width: 1276px) {
+    header {
+        padding: 1.385rem 3%;
+    }
+    header-container .header-content form {
+        grid-template-columns: repeat(1, 1fr);
+    }
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
